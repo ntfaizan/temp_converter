@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final tcController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  double? temperatureFaranheit;
+  double temperatureFaranheit = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 20),
                 const Text('Type the temperature in Celsius'),
-                if (temperatureFaranheit != null)
-                  Text('$temperatureFaranheit °Fahrenheit'),
+                // if (temperatureFaranheit != 0)
+                Text('$temperatureFaranheit °Fahrenheit'),
                 const SizedBox(height: 20),
                 SizedBox(
                   width: double.maxFinite,
